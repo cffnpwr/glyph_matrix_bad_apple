@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.file_path | select(endswith(\".kt\") or endswith(\".kts\"))' | xargs -r ./gradlew :app:spotlessApply --quiet"
+          }
+        ]
+      }
+    ]
+  }
+}
