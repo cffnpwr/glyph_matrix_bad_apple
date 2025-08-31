@@ -1,0 +1,2 @@
+# glyph_matrix_bad_apple
+Bad Apple動画をGlyphマトリックスで再生するAndroidアプリ
